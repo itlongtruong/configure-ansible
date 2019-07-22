@@ -1,0 +1,4 @@
+- name: Create a new database with name 'mydb'
+  mysql_db:
+    name: mydb
+    state: present

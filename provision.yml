@@ -1,0 +1,48 @@
+# local web
+- hosts:
+    - web
+  become: true
+  vars:
+    php_version: '7.2'
+    php_webserver_daemon: nginx
+    php_enable_php_fpm: true
+    php_enablerepo: remi
+    php_packages:
+      - php
+      - php-cli
+      - php-common
+      - php-devel
+      - php-gd
+      - php-imap
+      - php-ldap
+      - php-mbstring
+      - php-pdo
+      - php-pear
+      - php-pecl-apc
+      - php-xml
+      - php-xmlrpc
+      - php-fpm
+      - php-opcache
+      - php-mysqlnd
+  roles:
+    - geerlingguy.repo-epel
+    - geerlingguy.repo-remi
+    - geerlingguy.php-versions
+    - geerlingguy.php
+    - geerlingguy.nginx
+    - ericmdev.libselinux-python
+    - long.file
+    - long.copyfile
+    - long.nginxconfig	
+
+# local MySQL
+- hosts:
+  - db
+  become: true
+  remote_user: vagrant
+  roles:
+    - geerlingguy.repo-epel
+    - geerlingguy.repo-remi
+    - geerlingguy.mysql
+    - ericmdev.libselinux-python
+

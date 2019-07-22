@@ -1,0 +1,4 @@
+- name: copying file update
+  copy:
+   src: testfile.php
+   dest: /usr/share/nginx/html/testfile.php

@@ -1,0 +1,4 @@
+- name: Creates directory
+  file:
+    path: /usr/share/nginx/html/long
+    state: directory

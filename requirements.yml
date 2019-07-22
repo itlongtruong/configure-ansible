@@ -1,0 +1,6 @@
+- src: geerlingguy.repo-epel
+- src: geerlingguy.repo-remi
+- src: geerlingguy.php-versions
+- src: geerlingguy.php
+- src: geerlingguy.nginx
+- src: ericmdev.libselinux-python

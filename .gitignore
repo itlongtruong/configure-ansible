@@ -1,0 +1,8 @@
+.vagrant
+
+.provision.yml.swp
+
+provision.retry
+
+group_vars
+
